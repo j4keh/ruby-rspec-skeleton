@@ -1,0 +1,11 @@
+services:
+  ruby:
+    build:
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - ./app:/app:cached
+      - bundle:/bundle:cached
+    stdin_open: true
+    tty: true
+volumes:
+  bundle:
